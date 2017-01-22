@@ -6,34 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Orgmode es le leche, no creo que pueda encontrar una frase mejor para
+    <meta name="description" content="Table of Contents
+
+
+1. EDIT:
+
+
+
+
+Orgmode es le leche, no creo que pueda encontrar una frase mejor para
 empezar este post. Desde hace tiempo lo uso para mantener mi lista de
-TODOs, gestionar mi calendario, etc.
-
-
-
-Aparte de lo come">
+TODOs, gestionar mi cale">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mantener una lista de articulos para leer con org-mode">
 <meta property="og:url" content="https://rafaelleru.github.io/2017/01/22/to_read_list_emacs/index.html">
 <meta property="og:site_name" content="Plátano Informático">
-<meta property="og:description" content="Orgmode es le leche, no creo que pueda encontrar una frase mejor para
+<meta property="og:description" content="Table of Contents
+
+
+1. EDIT:
+
+
+
+
+Orgmode es le leche, no creo que pueda encontrar una frase mejor para
 empezar este post. Desde hace tiempo lo uso para mantener mi lista de
-TODOs, gestionar mi calendario, etc.
-
-
-
-Aparte de lo come">
-<meta property="og:updated_time" content="2017-01-22T13:19:02.620Z">
+TODOs, gestionar mi cale">
+<meta property="og:updated_time" content="2017-01-22T18:18:47.796Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mantener una lista de articulos para leer con org-mode">
-<meta name="twitter:description" content="Orgmode es le leche, no creo que pueda encontrar una frase mejor para
+<meta name="twitter:description" content="Table of Contents
+
+
+1. EDIT:
+
+
+
+
+Orgmode es le leche, no creo que pueda encontrar una frase mejor para
 empezar este post. Desde hace tiempo lo uso para mantener mi lista de
-TODOs, gestionar mi calendario, etc.
-
-
-
-Aparte de lo come">
+TODOs, gestionar mi cale">
     
     
         
@@ -118,7 +130,7 @@ Aparte de lo come">
 
     </div>
     <div id="toc">
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">Table of Contents</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sec-1"><span class="toc-number">2.</span> <span class="toc-text">1 EDIT:</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -141,7 +153,7 @@ Aparte de lo come">
       </span>
       
     <div class="postdate">
-        <time datetime="2017-01-22T13:19:02.620Z" itemprop="datePublished">2017-01-22</time>
+        <time datetime="2017-01-22T18:18:47.796Z" itemprop="datePublished">2017-01-22</time>
     </div>
 
 
@@ -159,6 +171,14 @@ Aparte de lo come">
   <div class="content" itemprop="articleBody">
     
 
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. EDIT:</a></li>
+</ul>
+</div>
+</div>
 <p>
 Orgmode es le leche, no creo que pueda encontrar una frase mejor para
 empezar este post. Desde hace tiempo lo uso para mantener mi lista de
@@ -168,46 +188,56 @@ TODOs, gestionar mi calendario, etc.
 <p>
 Aparte de lo comentado anteriormente mentengo tambien una lista de
 enlaces y articulos que leer, la almaceno en un archivo llamado
-<code>to-read.org</code> y hata hace poco para abrirlo tenia que abrir emacs,
+<code>to-read.org</code> y hasta hace poco para abrirlo ten&#xED;a que abrir emacs,
 abrir el archivo y empezar a navegar por los enlaces, pero hace unos
-dias se me ocurrio una idea. Gracias a los multiples backend para
-exportar que tiene orgmode podia generar un html de dicho archivo y
-visitarlo desde mi navegador, pero no era comodo generar el html cada
+d&#xED;as se me ocurri&#xF3; una idea. Gracias a los m&#xFA;ltiples backend para
+exportar que tiene orgmode puedo generar un html de dicho archivo y
+visitarlo desde mi navegador, pero no era c&#xF3;modo generar el html cada
 vez que a&#xF1;adia un enlace.
 </p>
 
 <p>
-Para automatizarlo simplemente he creado una funion en mi archivo de
-<a href="https://github.com/rafaelleru/emacs_configuration" target="_blank" rel="external">archivo de configuraci&#xF3;n</a> que detecta cuando modifico el archivo y
-automaticamente crea el html, despues simplemente a&#xF1;adimos un hook de
-org-mode para que cada vez que se guarde el archivo genere la web que
-queremos visitar desde el navegador.
+Para automatizarlo simplemente he creado una funci&#xF3;n en mi <a href="https://github.com/rafaelleru/emacs_configuration" target="_blank" rel="external">archivo de
+configuraci&#xF3;n</a> que detecta cuando modifico <code>to-read.org</code> y automaticamente
+crea el html, despu&#xE9;s simplemente a&#xF1;adimos un hook a org-mode para
+que cada vez que se guarde el archivo genere la web que queremos
+visitar desde el navegador.
 </p>
 
 <p>
-La funcion es la siguiente: 
+La funci&#xF3;n es la siguiente: 
 </p>
 
 <div class="org-src-container">
 
-<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">defun</span> org-mode-export-hook<span class="list">()</span></span><br><span class="line">  <span class="string">&quot;Auto export html&quot;</span></span><br><span class="line">  <span class="list">(<span class="keyword">when</span> <span class="list">(<span class="keyword">eq</span> major-mode <span class="quoted">&apos;org-mode</span>)</span></span><br><span class="line">    <span class="list">(<span class="keyword">when</span> <span class="list">(<span class="keyword">eq</span> buffer-file-name <span class="string">&quot;/home/rafa/org/to-read.org&quot;</span>)</span>)</span></span><br><span class="line">     <span class="list">(<span class="keyword">org-twbs-export-to-html</span> <span class="literal">t</span>)</span>)</span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">defun</span> org-mode-export-hook<span class="list">()</span></span><br><span class="line">  <span class="string">&quot;Auto export html&quot;</span></span><br><span class="line">  <span class="list">(<span class="keyword">when</span> <span class="list">(<span class="keyword">eq</span> major-mode <span class="quoted">&apos;org-mode</span>)</span></span><br><span class="line">    <span class="list">(<span class="keyword">when</span> <span class="list">(<span class="keyword">equal</span> buffer-file-name <span class="string">&quot;/home/rafa/org/to-read.org&quot;</span>)</span></span><br><span class="line">     <span class="list">(<span class="keyword">org-twbs-export-to-html</span> <span class="literal">t</span>)</span>)</span>)</span>)</span></span><br></pre></td></tr></table></figure>
 </div>
 
 <p>
-Y su cometido es detectar que esta en un buffer de tipo <code>org-mode</code>, y
-si el nombre del archivo que esta abierto en el buffer es el indice de
+Y su cometido es detectar que est&#xE1; en un buffer de tipo <code>org-mode</code>, y
+si el nombre del archivo que est&#xE1; abierto en el buffer es el &#xED;ndice de
 enlaces para leer exportar directamente a html dicho archivo.
 </p>
 
 <p>
-Para que el html no quedase tan soso en vez de usar el comando
-<code>org-html-export-to-html</code> he instalado el paquete <code>ox-twbs</code> que
-permite exportar un html con un css dado, y lo hace mejor que el que
+Para que el html no quede tan soso en vez de usar el comando
+<code>org-html-export-to-html</code> he instalado el paquete <code>ox-twbs</code>. Para ello
+a&#xF1;adimos lo siguiente a nuestro archivo de configuraci&#xF3;n (tambien
+podemos instalarlo con <code>M-x install-package RET ox-twbs RET</code>)
+</p>
+
+<div class="org-src-container">
+
+<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">use-package</span> ox-twbs</span><br><span class="line">  <span class="keyword">:ensure</span> <span class="literal">t</span>)</span></span><br></pre></td></tr></table></figure>
+</div>
+
+<p>
+<code>ox-twbs</code> nos exportar un html con un css dado, y lo hace mejor que el que
 integra <code>org-mode</code> por defecto.
 </p>
 
 <p>
-Por ultimo a&#xF1;adimos el hook para org-mode que llame a nuestra funci&#xF3;n
+Por &#xFA;ltimo a&#xF1;adimos el hook para org-mode que llame a nuestra funci&#xF3;n
 cada vez que guardemos dicho archivo.
 </p>
 
@@ -221,7 +251,18 @@ Luego solo tenemos que abrir to-read.html en el navegador y si lo
 vamos a visitar mucho a&#xF1;adirlo como marcador.
 </p>
 
-<p class="date">Created: 2017-01-22 dom 14:20</p>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> EDIT:</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Tras ver que no funcionaba como esperaba consulte
+<a href="http://emacs.stackexchange.com/" target="_blank" rel="external">http://emacs.stackexchange.com/</a> y parece ser que para comparar no hay
+que usar <code>eq</code> sino <code>equal</code>.
+</p>
+</div>
+</div>
+
+<p class="date">Created: 2017-01-22 dom 19:19</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.1.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer" target="_blank" rel="external">Validate</a></p>
 
@@ -250,7 +291,7 @@ vamos a visitar mucho a&#xF1;adirlo como marcador.
     </div>
 
     <div id="toc-footer" style="display: none">
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">Table of Contents</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sec-1"><span class="toc-number">2.</span> <span class="toc-text">1 EDIT:</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
