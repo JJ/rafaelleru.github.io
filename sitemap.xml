@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://rafaelleru.github.io/post/small-shell/</loc>
+    <lastmod>2017-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://rafaelleru.github.io/post/tilingwm/</loc>
+    <lastmod>2017-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://rafaelleru.github.io/about/</loc>
+    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://rafaelleru.github.io/license/</loc>
+    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://rafaelleru.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://rafaelleru.github.io/tags/dwm/</loc>
+    <lastmod>2017-05-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://rafaelleru.github.io/tags/emacs/</loc>
+    <lastmod>2017-05-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://rafaelleru.github.io/tags/i3wm/</loc>
+    <lastmod>2017-05-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://rafaelleru.github.io/post/to_read_list_emacs/</loc>
+  </url>
+  
+  <url>
+    <loc>http://rafaelleru.github.io/tags/orgmode/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://rafaelleru.github.io/</loc>
+    <lastmod>2017-05-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://rafaelleru.github.io/post/</loc>
+    <lastmod>2017-05-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://rafaelleru.github.io/post/first_post/</loc>
+  </url>
+  
+  <url>
+    <loc>http://rafaelleru.github.io/post/expand-region-emacs/</loc>
+  </url>
+  
+  <url>
+    <loc>http://rafaelleru.github.io/tags/shell/</loc>
+    <lastmod>2017-05-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://rafaelleru.github.io/tags/</loc>
+    <lastmod>2017-05-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://rafaelleru.github.io/tags/twm/</loc>
+    <lastmod>2017-05-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
